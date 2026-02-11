@@ -26,5 +26,16 @@ Console.Write("A sua Média é:");
 Console.Write(media);
 Console.ReadKey();
 
+#endregion
+
+#region 2. Conversor de Idade
+Console.Write("Digite a sua idade em anos: ");
+int idade = Convert.ToInt32(Console.ReadLine());
+
+int converterDias = idade * 365;
+
+Console.Write("A sua idade em dias é:");
+Console.WriteLine(converterDias);
+Console.ReadKey();
 
 #endregion
