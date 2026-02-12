@@ -75,23 +75,47 @@
 #endregion
 
 #region 2. Classificador de Número
-Console.Write("Digite um número inteiro:");
-int numInteiro = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Digite um número inteiro:");
+//int numInteiro = Convert.ToInt32(Console.ReadLine());
 
-if (numInteiro % 2 == 0 && numInteiro > 0)
+//if (numInteiro % 2 == 0 && numInteiro > 0)
+//{
+//    Console.WriteLine("O seu número é par e positivo");
+//}
+//else if (numInteiro % 2 != 0 && numInteiro >= 0)
+//{
+//    Console.WriteLine("O seu número é ímpar e positivo");
+//}
+//else if (numInteiro < 0)
+//{
+//    Console.WriteLine("O seu número é negativo");
+//}
+//else
+//{
+//    Console.WriteLine("O seu número é Zero");
+//}
+#endregion
+
+#region 3. Validação de Login Simples
+bool validador = true;
+while(validador)
 {
-    Console.WriteLine("O seu número é par e positivo");
-}
-else if (numInteiro % 2 != 0 && numInteiro >= 0)
-{
-    Console.WriteLine("O seu número é ímpar e positivo");
-}
-else if (numInteiro < 0)
-{
-    Console.WriteLine("O seu número é negativo");
-}
-else
-{
-    Console.WriteLine("O seu número é Zero");
+    Console.WriteLine("\nTela de Login");
+    Console.Write("Digite o seu Login:");
+    string login = Console.ReadLine();
+
+    Console.Write("Digite a seu senha:");
+    string senha = Console.ReadLine();
+
+    if (login == "admin" && senha == "12345")
+    {
+        Console.WriteLine("Login efetuado com sucesso");
+        validador = false;
+    }
+    else
+    {
+        Console.WriteLine("Usuário ou senha inválidos");
+    }
+    Console.ReadKey();
 }
 #endregion
