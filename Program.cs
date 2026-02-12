@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-//Lista de Exercício lógica c#
 //Nível 1: Variáveis e Operações Básicas
 
 #region 1. Calculadora de Média Simples 
@@ -39,18 +38,36 @@
 
 #region 3. Troca de Valores
 
-int variavelA = 20;
-int variavelB = 40;
-int variavelC = 0;
+//int variavelA = 20;
+//int variavelB = 40;
+//int variavelC = 0;
 
-Console.WriteLine($"A primeira variável é: {variavelA}, a segunda variável é: {variavelB}");
+//Console.WriteLine($"A primeira variável é: {variavelA}, a segunda variável é: {variavelB}");
 
-variavelC = variavelA;
+//variavelC = variavelA;
 
-variavelA = variavelB;
+//variavelA = variavelB;
 
-variavelB = variavelC;
-Console.WriteLine("--------------------------------------");
-Console.WriteLine($"O novo valor da primeira variável é: {variavelA}, o novo valor da segunda veriável é: {variavelB}");
+//variavelB = variavelC;
+//Console.WriteLine("--------------------------------------");
+//Console.WriteLine($"O novo valor da primeira variável é: {variavelA}, o novo valor da segunda veriável é: {variavelB}");
 
+#endregion
+
+//Nível 2: Estruturas Condicionais(if, else if, else)
+
+#region 1. Verificador de Maioridade
+int Maioridade = 18;
+
+Console.Write("Digite sua idade:");
+int idadeUsuario = Convert.ToInt32(Console.ReadLine());
+
+if (idadeUsuario >= Maioridade)
+{
+    Console.WriteLine("Entrada autorizada");
+} 
+else
+{
+    Console.WriteLine("Entrada não autorizada. Menor de idade");
+}
 #endregion
