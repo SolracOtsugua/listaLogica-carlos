@@ -18,9 +18,11 @@
 
 //double media = (nota1 + nota2 + nota3 + nota4)/4;
 
+//Console.WriteLine($"A média das notas é: {media:F2}");
 //Console.Write("A sua Média é:");
 //Console.Write(media);
 //Console.ReadKey();
+
 
 #endregion
 
@@ -57,17 +59,39 @@
 //Nível 2: Estruturas Condicionais(if, else if, else)
 
 #region 1. Verificador de Maioridade
-int Maioridade = 18;
+//int Maioridade = 18;
 
-Console.Write("Digite sua idade:");
-int idadeUsuario = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Digite sua idade:");
+//int idadeUsuario = Convert.ToInt32(Console.ReadLine());
 
-if (idadeUsuario >= Maioridade)
+//if (idadeUsuario >= Maioridade)
+//{
+//    Console.WriteLine("Entrada autorizada");
+//} 
+//else
+//{
+//    Console.WriteLine("Entrada não autorizada. Menor de idade");
+//}
+#endregion
+
+#region 2. Classificador de Número
+Console.Write("Digite um número inteiro:");
+int numInteiro = Convert.ToInt32(Console.ReadLine());
+
+if (numInteiro % 2 == 0 && numInteiro > 0)
 {
-    Console.WriteLine("Entrada autorizada");
-} 
+    Console.WriteLine("O seu número é par e positivo");
+}
+else if (numInteiro % 2 != 0 && numInteiro >= 0)
+{
+    Console.WriteLine("O seu número é ímpar e positivo");
+}
+else if (numInteiro < 0)
+{
+    Console.WriteLine("O seu número é negativo");
+}
 else
 {
-    Console.WriteLine("Entrada não autorizada. Menor de idade");
+    Console.WriteLine("O seu número é Zero");
 }
 #endregion
