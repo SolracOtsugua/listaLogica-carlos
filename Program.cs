@@ -97,25 +97,44 @@
 #endregion
 
 #region 3. Validação de Login Simples
-bool validador = true;
-while(validador)
-{
-    Console.WriteLine("\nTela de Login");
-    Console.Write("Digite o seu Login:");
-    string login = Console.ReadLine();
+//bool validador = true;
+//while(validador)
+//{
+//    Console.WriteLine("\nTela de Login");
+//    Console.Write("Digite o seu Login:");
+//    string login = Console.ReadLine();
 
-    Console.Write("Digite a seu senha:");
-    string senha = Console.ReadLine();
+//    Console.Write("Digite a seu senha:");
+//    string senha = Console.ReadLine();
 
-    if (login == "admin" && senha == "12345")
-    {
-        Console.WriteLine("Login efetuado com sucesso");
-        validador = false;
-    }
-    else
-    {
-        Console.WriteLine("Usuário ou senha inválidos");
-    }
-    Console.ReadKey();
-}
+//    if (login == "admin" && senha == "12345")
+//    {
+//        Console.WriteLine("Login efetuado com sucesso");
+//        validador = false;
+//    }
+//    else
+//    {
+//        Console.WriteLine("Usuário ou senha inválidos");
+//    }
+//    Console.ReadKey();
+//}
+#endregion
+
+//Nível 3: Estruturas de Repetição (Loops)
+#region 1. Contagem Regressiva
+
+//for(int i = 10; i != 0; i--)
+//{
+//    Console.WriteLine($"Tempo restante: {i}");
+//    Thread.Sleep( 1000 );
+//}
+//Console.WriteLine("\nLançar");
+//Console.ReadKey();
+
+#endregion
+
+#region 2. Soma de Ímpares (Loop while)
+
+
+
 #endregion
