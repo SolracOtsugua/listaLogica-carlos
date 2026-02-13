@@ -134,7 +134,23 @@
 #endregion
 
 #region 2. Soma de Ímpares (Loop while)
+int acumulador = 0;
+while(true)
+{
+    Console.WriteLine("\n-----Somatório de Número ímpares");
+    Console.Write("Digite um número (Digite 0 para encerrar):");
+    
+    int numeroImpar = Convert.ToInt32(Console.ReadLine());
 
-
+    if (numeroImpar % 2 != 0)
+    {
+        acumulador = acumulador + numeroImpar;
+    }
+    else if (numeroImpar == 0)
+    {
+        break;
+    }
+}
+Console.WriteLine($"A somatória de todos os valores ímpares é: {acumulador}");
 
 #endregion
