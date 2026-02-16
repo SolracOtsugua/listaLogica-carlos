@@ -155,17 +155,46 @@
 
 #endregion
 
-#region
-Console.WriteLine("\n-----Tabuada de números inteiro------");
-Console.Write("Digite um número inteiro:");
-int numeroTabuada = Convert.ToInt32(Console.ReadLine());
+#region 3. Tabuada Personalizada
+//Console.WriteLine("\n-----Tabuada de números inteiro------");
+//Console.Write("Digite um número inteiro:");
+//int numeroTabuada = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 1; i<= 10; i++)
+//for (int i = 1; i<= 10; i++)
+//{
+//    int valorTabuada = numeroTabuada * i;
+
+//    Console.WriteLine($"{numeroTabuada} x {i} = {valorTabuada}");
+//    Thread.Sleep( 1000 );
+//}
+//Console.ReadKey();
+#endregion
+
+//Nível 4: Coleções(Arrays e Listas)
+
+#region 1. Inversão de Array
+using System.Runtime.InteropServices;
+
+List<string> nomes = new List<string>();
+Console.WriteLine("\nLista com 5 nomes");
+for (int i = 1; i <= 5; i++)
 {
-    int valorTabuada = numeroTabuada * i;
 
-    Console.WriteLine($"{numeroTabuada} x {i} = {valorTabuada}");
-    Thread.Sleep( 1000 );
+    Console.Write($"Digite o {i}º nome:");
+    string nomeDigitado = Console.ReadLine();
+
+    nomes.Add(nomeDigitado);
+}
+
+foreach (string nome in nomes)
+{ 
+    Console.WriteLine(nome); 
 }
 Console.ReadKey();
+Console.WriteLine("\n");
+
+for (int i = nomes.Count - 1; i >=0; i--)
+{
+    Console.WriteLine(nomes[i]);
+}
 #endregion
