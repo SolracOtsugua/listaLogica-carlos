@@ -121,6 +121,7 @@
 #endregion
 
 //Nível 3: Estruturas de Repetição (Loops)
+
 #region 1. Contagem Regressiva
 
 //for(int i = 10; i != 0; i--)
@@ -173,28 +174,70 @@
 //Nível 4: Coleções(Arrays e Listas)
 
 #region 1. Inversão de Array
-using System.Runtime.InteropServices;
+//using System.Runtime.InteropServices;
 
-List<string> nomes = new List<string>();
-Console.WriteLine("\nLista com 5 nomes");
-for (int i = 1; i <= 5; i++)
+//List<string> nomes = new List<string>();
+//Console.WriteLine("\nLista com 5 nomes");
+//for (int i = 1; i <= 5; i++)
+//{
+
+//    Console.Write($"Digite o {i}º nome:");
+//    string nomeDigitado = Console.ReadLine();
+
+//    nomes.Add(nomeDigitado);
+//}
+
+//foreach (string nome in nomes)
+//{ 
+//    Console.WriteLine(nome); 
+//}
+//Console.ReadKey();
+//Console.WriteLine("\n");
+
+//for (int i = nomes.Count - 1; i >=0; i--)
+//{
+//    Console.WriteLine(nomes[i]);
+//}
+#endregion
+
+#region 2. Busca e Contagem em Listaa(Foreach)
+using System;
+
+//Criando a lista de cores
+List<string> cores = new List<string>();
+
+//Adicionando as cores
+cores.Add("Azul");
+cores.Add("Amarelo");
+cores.Add("Verde");
+cores.Add("Azul");
+cores.Add("Verde");
+cores.Add("Azul");
+cores.Add("Amarelo");
+cores.Add("Vermelho");
+cores.Add("Preto");
+cores.Add("Amarelo");
+cores.Add("Rosa");
+
+Console.Write("Ecolha uma cor para buscar na lista:");
+string corEscolhida = Console.ReadLine();
+int count = 0;
+
+foreach (string cor in cores)
 {
-
-    Console.Write($"Digite o {i}º nome:");
-    string nomeDigitado = Console.ReadLine();
-
-    nomes.Add(nomeDigitado);
+    if (corEscolhida == cor)
+    {
+        count = count + 1;
+    } 
 }
-
-foreach (string nome in nomes)
-{ 
-    Console.WriteLine(nome); 
-}
-Console.ReadKey();
-Console.WriteLine("\n");
-
-for (int i = nomes.Count - 1; i >=0; i--)
+if (count > 0)
 {
-    Console.WriteLine(nomes[i]);
+    Console.WriteLine($"A cor que você escolheu se repete {count} vezes");
+} 
+else
+{
+    Console.WriteLine($" {count} A cor digitado não foi encontrada");
 }
+
+
 #endregion
