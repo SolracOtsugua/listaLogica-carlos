@@ -201,43 +201,85 @@
 #endregion
 
 #region 2. Busca e Contagem em Listaa(Foreach)
-using System;
+//using System;
 
-//Criando a lista de cores
-List<string> cores = new List<string>();
+////Criando a lista de cores
+//List<string> cores = new List<string>();
 
-//Adicionando as cores
-cores.Add("Azul");
-cores.Add("Amarelo");
-cores.Add("Verde");
-cores.Add("Azul");
-cores.Add("Verde");
-cores.Add("Azul");
-cores.Add("Amarelo");
-cores.Add("Vermelho");
-cores.Add("Preto");
-cores.Add("Amarelo");
-cores.Add("Rosa");
+////Adicionando as cores
+//cores.Add("Azul");
+//cores.Add("Amarelo");
+//cores.Add("Verde");
+//cores.Add("Azul");
+//cores.Add("Verde");
+//cores.Add("Azul");
+//cores.Add("Amarelo");
+//cores.Add("Vermelho");
+//cores.Add("Preto");
+//cores.Add("Amarelo");
+//cores.Add("Rosa");
 
-Console.Write("Ecolha uma cor para buscar na lista:");
-string corEscolhida = Console.ReadLine();
-int count = 0;
+//Console.Write("Ecolha uma cor para buscar na lista:");
+//string corEscolhida = Console.ReadLine();
+//int count = 0;
 
-foreach (string cor in cores)
+//foreach (string cor in cores)
+//{
+//    if (corEscolhida == cor)
+//    {
+//        count = count + 1;
+//    } 
+//}
+//if (count > 0)
+//{
+//    Console.WriteLine($"A cor que você escolheu se repete {count} vezes");
+//} 
+//else
+//{
+//    Console.WriteLine("A cor digitado não foi encontrada");
+//}
+
+#endregion
+
+#region 3. Gerenciador de Tarefas Simples (CRUD Básico em Memória)
+
+List<string> tarefas = new List<string>();
+
+while (true)
 {
-    if (corEscolhida == cor)
+    Console.WriteLine("\nGerenciador de Tarefas");
+    Console.WriteLine("1. Adicionar Tarefa");
+    Console.WriteLine("2. Listar Tarefas");
+    Console.WriteLine("3. Sair");
+    Console.Write("Escolha:");
+
+    string opcao = Console.ReadLine();
+
+
+    if (opcao == "1")
     {
-        count = count + 1;
-    } 
-}
-if (count > 0)
-{
-    Console.WriteLine($"A cor que você escolheu se repete {count} vezes");
-} 
-else
-{
-    Console.WriteLine($" {count} A cor digitado não foi encontrada");
-}
+        Console.WriteLine("Adicione sua tarefa:");
+        string tarefaDigitada = Console.ReadLine();
 
+        tarefas.Add(tarefaDigitada);
+    }
+    else if (opcao == "2")
+    {
+        int i = 1;
+        foreach (string tarefa in tarefas)
+        {
+            Console.WriteLine($"{i} - {tarefa}");
+            i++;
+        }
+    } 
+    else if (opcao == "3")
+    {
+        break;
+    }
+    else
+    {
+        Console.WriteLine("Opção Inválida!");
+    }
+}
 
 #endregion
